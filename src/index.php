@@ -47,12 +47,12 @@ print($product->getQuantity() . "<br>");
 
 // then I would try to see if it's possible to shard the data by logical shells
 // i.e.: make tables per months, per distributor, and so forth and update the code
-// to know that factor before hand.
+// to gather that information beforehand.
 
 // Also I would look at what kind of data is being pulled. 1 million entries for
-// a mysql table shout NOT be problematic (like, not even close), so maybe the data
+// a mysql table should -NOT- be problematic so maybe the data
 // being pulled is too heavy, or part of it is, and could be moved to a service.
-// with data on an online storage with a small service pulling it for you.
+// That service could store data on an online storage with a small handler pulling it for you.
 // i.e: aws s3 data served by a lambda plugged on a CDN.
 
 // Then, if it's simple and logical, maybe the DB is being called too often to
@@ -62,6 +62,7 @@ print($product->getQuantity() . "<br>");
 // If none of these are applicable, then following the official mysql guidelines
 // to optimize your tables could help:
 // https://dev.mysql.com/doc/refman/5.7/en/optimization.html
+// ...Actually, maybe this should be step 1. Hard to tell with no real problem.
 
 // It's really hard to find a concrete solution to a non specific problem.
 // I'm sure I could have different ideas if I had a specific situation in front
@@ -74,6 +75,7 @@ print($product->getQuantity() . "<br>");
 // I left comments in the code as notes to the person reviewing my test.
 // I want to let you know that I would never put comments in my code.
 // I'm a strong believer of the documentation as code pattern.
+// If you find yourself needing to put comment then your code can be reworked to be simpler.
 
 // Also, there is no files structure, everything is dumped in a folder.
 // Again, this is not something I would consider to be okay in a real life
