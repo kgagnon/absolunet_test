@@ -1,0 +1,7 @@
+1. absolunet.local must be pointing to localhost
+2. docker compose to start the server
+3. visit http://absolunet.local:8080/
+
+You can find all the answers in index.php  as comments (no this is not where you should put all the code normaly)
+
+If you visit http://absolunet.local:8080/ you should have the answer of question 1 and the error logged of question 5
