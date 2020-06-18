@@ -25,15 +25,15 @@ print($product->getQuantity() . "<br>");
 /*************
 * Question 3 *
 *************/
-// I added a pdf called question3.pdf representing a very very rought schema of
+// I added a pdf called question3.pdf representing a very very rough schema of
 // the tables with the minimum requirements from the question. Note that the
-// favorite payment is not stored anywhere because I assumed that a decent system
-// would call a some-kind-of-whatever-service to get that information instead.
+// favorite payment method is not stored anywhere because I assumed that a decent system
+// would call a some-kind-of-whatever-service to get that sensible information instead.
 
 // I did not expand on the internal attributes of each table except for the Users
-// to mark that a user could have many shipping address
+// to mark that a user could have many shipping address stored in its own table
 // (as marked by the relationship indicators) but could also have a simple
-// addressId as its favorite.
+// addressId pointing to its favorite.
 
 
 /*************
